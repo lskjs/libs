@@ -34,8 +34,8 @@ test('env schema - invalid', async () => {
     assert.unreachable('should have thrown');
   } catch (err: any) {
     assert.instance(err, Err);
-    assert.match(err.code, 'invalidConfig');
-    assert.match(err.message, 'invalidConfig');
+    assert.match(err.code, 'invalidConfigSchema');
+    assert.match(err.message, 'Incorrect config schema for');
     // assert.is(err.code, 'ERROR123');
   }
 
@@ -78,8 +78,8 @@ test('env schema - misssing', async () => {
     assert.unreachable('should have thrown');
   } catch (err: any) {
     assert.instance(err, Err);
-    assert.match(err.code, 'invalidConfig');
-    assert.match(err.message, 'invalidConfig');
+    assert.match(err.code, 'invalidConfigSchema');
+    assert.match(err.message, 'Incorrect config schema for');
     // assert.is(err.code, 'ERROR123');
   }
 

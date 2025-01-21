@@ -35,7 +35,12 @@ export function checkSchema<T>(
         error: result.error,
       };
     }
-    throw new Err('invalidConfig', { name: res.name, path: res.path, result });
+    const errMessage = `Incorrect config schema for ${[res.name, res.path]
+      .filter(Boolean)
+      .join(':')}: ${result.error.errors
+      .map((err) => [stringify(err.path), err.message].filter(Boolean).join(' '))
+      .join(' ')}`;
+    throw new Err('invalidConfigSchema', errMessage, { name: res.name, path: res.path, result });
   }
   return {
     ...res,
