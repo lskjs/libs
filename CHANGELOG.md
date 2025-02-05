@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.28.3](https://github.com/lskjs/lsk4/compare/v4.28.2...v4.28.3) (2025-02-05)
+
+
+### Bug Fixes
+
+* **config:** change invalidConfigSchema error message ([bc93077](https://github.com/lskjs/lsk4/commit/bc9307721d706e0456e1432114633a1687859222))
+
+
+
+
+
 ## [4.28.2](https://github.com/lskjs/lsk4/compare/v4.28.1...v4.28.2) (2025-01-21)
 
 
